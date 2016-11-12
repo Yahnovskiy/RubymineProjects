@@ -1,0 +1,163 @@
+array_to_sort = [6,5,80, 3, 12 ,25,60,70, 100]
+def create_big_array_to_sort(n,m)
+  big_array_to_sort = []
+  for n in (1..n)
+    big_array_to_sort << rand(m)
+  end
+  return big_array_to_sort
+end
+
+# 1 ************ Insert_sort_common ************
+def insert_sort_array_common(array)
+  puts "=== NUMBER 1.1 START Insert_sort_array_common ==="
+  t0 = Time.new
+  n = 1
+  # for i in (0..array.size-1)
+  (1..array.size-1).each() do |i|
+    j = i
+    # puts "i = #{i}"
+
+    while array[j] < array[j-1] && j >= 1
+      # puts "#{n})array[#{j}]=#{array[j]} < array[#{j-1}]=#{array[j-1]}"
+      temp = array[j-1]
+      array[j-1] = array[j]
+      array[j] = temp
+      n += 1
+      j -= 1
+      # puts array.to_s
+    end
+  end
+  puts array.to_s
+  t1 = Time.new
+  puts " * Sorting takes this time #{t1-t0} sec"
+  puts "=== NUMBER 1.2 FINISH Insert_sort_array_common ==="
+end
+
+# 2 ************ Insert_sort_recurse ************
+def insert_sort_array_recurse(array)
+  puts "=== NUMBER 2.1 START Insert_sort_array_recurse ==="
+  t0 = Time.new
+  def insert_sort_array(array)
+    (1..array.size-1).each() do |i|
+      if array[i] < array[i-1] && i < (array.size)
+        # puts " - array[#{i}]=#{array[i]} < array[#{i-1}]=#{array[i-1]}"
+        temp = array[i-1]
+        array[i-1] = array[i]
+        array[i] = temp
+        # puts array.to_s
+        insert_sort_array(array)
+      end
+    end
+  end
+  insert_sort_array(array)
+  puts array.to_s
+  t1 = Time.new
+  puts " * Sorting takes this time #{t1-t0} sec"
+  puts "=== NUMBER 2.2 FINISH Insert_sort_array_recurse ==="
+end
+
+# 3 ---
+# 4 ************ Quick_sort_recurse ************
+def quick_sort_array_recurse(array)
+  puts array.to_s
+  def quick_sort (array, low, high)
+    puts array.to_s
+    i = low
+    j = high
+    middle = array[(low+high)/2.ceil]
+    puts "i=#{i}, j=#{j}, middle=#{middle}"
+    while (i < j)
+      while(array[i] < middle)
+        puts "WITHOUT CHANGE array[#{i}]=#{array[i]} < middle = #{middle}"
+        i += 1
+        puts "i=#{i}"
+      end
+      while(array[j] > middle)
+        puts "WITHOUT CHANGE array[#{j}]=#{array[j]} > middle = #{middle}"
+        j -= 1
+        puts "j=#{j}"
+      end
+      if(i <= j)
+        puts "BEFORE CHANGE i= #{i}; j= #{j}, #{array.to_s}"
+        temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
+        i += 1; j -= 1
+        puts "AFTER CHANGE i= #{i}; j= #{j}, #{array.to_s}"
+      end
+    end
+    if (low < j)
+      puts "!LOW: low = #{low} < j = #{j}"
+      quick_sort(array, low, j)
+    end
+    if (i < high)
+      puts "!HIGH: i = #{i} < high = #{high}"
+      quick_sort(array, i, high)
+    end
+  end
+  quick_sort(array, 0, array.size-1)
+  puts array.to_s
+end
+
+# 5 ---
+# 6 ************ Merge_sort_recurse ************
+def merge_sort_array_recurse(array)
+  # puts array
+  def merge(left, right)
+    # puts "MERGE, left is #{left.to_s}, right is #{right.to_s}"
+    result = []
+    while left.size > 0 && right.size > 0
+      # puts "WHILE, left is #{left.to_s}, right is #{right.to_s}"
+      if left[0] <= right[0]
+        result << left[0]
+        left.delete_at(0)
+        # puts "balance left is #{left.to_s}"
+      else
+        result << right[0]
+        right.delete_at(0)
+        # puts "balance right is #{right.to_s}"
+      end
+    end
+    if left.size > 0
+      (0..left.size-1).each do |m|
+        result << left[m]
+      end
+    end
+    if right.size > 0
+      (0..right.size-1).each do |m|
+        result << right[m]
+      end
+    end
+    puts "AFTER result_array = #{result.to_s}"
+    return result
+  end
+
+  # puts "Array.size = #{array.size} and array = #{array.to_s}"
+  if array.size <= 1
+    # puts "array has 1 number"
+    array
+  else
+    middle = (array.length/2).floor
+    # puts "middle is #{middle}"
+    left = merge_sort_array_recurse(array[0..middle-1])
+    # puts "left is #{left}"
+    right = merge_sort_array_recurse(array[middle..array.size])
+    # puts "right is #{right}"
+    return merge(left, right)
+  end
+end
+
+# 1 INSERT
+# insert_sort_array_common(array_to_sort)
+# insert_sort_array_common(create_big_array_to_sort(10000,10000))
+# 2 INSERT
+# insert_sort_array_recurse(array_to_sort)
+# insert_sort_array_recurse(create_big_array_to_sort(50,100))
+# 3 ---
+# 4 QUICK
+# quick_sort_array_recurse(array_to_sort)
+# quick_sort_array_recurse(create_big_array_to_sort(1000,100))
+# 5 ---
+# 6 MERGE
+# merge_sort_array_recurse(array_to_sort)
+# merge_sort_array_recurse(create_big_array_to_sort(1000,100))

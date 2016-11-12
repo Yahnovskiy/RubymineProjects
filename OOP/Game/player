@@ -1,0 +1,18 @@
+class player
+  def initialize (type, field)
+    @type = ptype
+    @field = field
+
+
+  end
+
+  def is_empty_cell?
+    @field.is_empty_cell?
+  end
+  def is_win?
+    @field.is_win?
+  end
+  def step
+    #
+  end
+end

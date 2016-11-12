@@ -1,0 +1,12 @@
+<h1> Welcome to chat </h1>
+<nav>
+  <% if session[:login] == nil %>
+      <%= link_to 'login' , login_path %>
+      <%= link_to 'registration' , registration_index_path %>
+  <%  else %>
+      <%= link_to 'chat', chat_path %>
+  <% end %>
+</nav>
+
+
+

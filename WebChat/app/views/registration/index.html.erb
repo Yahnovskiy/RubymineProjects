@@ -1,0 +1,17 @@
+<h1>Registration</h1>
+
+<%= form_for(@chat_user, url:{action: 'create'}) do |user_form|%>
+    <br/>
+    <%= label_tag(:name, 'Name') %>
+    <%= user_form.text_field(:name) %>
+    <br/>
+    <%= label_tag(:login, 'Login') %>
+    <%= user_form.text_field(:login) %>
+    <br/>
+    <%= label_tag(:password, 'Password') %>
+    <%= user_form.text_field(:password) %>
+
+
+
+    <%= submit_tag('Send') %>
+<% end %>
