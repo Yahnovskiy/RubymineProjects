@@ -47,8 +47,10 @@
   };
 
   function disconnect(){
-    socket.close();
+//    socket.close();
+    socket.send('disconnect')
   };
+
 </script>
 
 <p>Hello, <%=@login%></p>

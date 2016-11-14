@@ -1,5 +1,6 @@
 class ChatController < ApplicationController
   include Tubesock::Hijack
+
   def index
     if session[:login] == nil
       redirect_to :root
@@ -39,7 +40,7 @@ class ChatController < ApplicationController
           output = ''
           users = $chat_users.keys
           users.each do |user|
-            output += user + '\n'
+            output += user + "\n"
           end
           puts output
           client_sock.send_data('list:' + output)
@@ -53,6 +54,7 @@ class ChatController < ApplicationController
         elsif (data_array[0] == 'disconnect')
           login = $chat_users.index(client_sock)
           $chat_users.delete(login)
+          session.clear
         else
           receiver_name = data_array[0]
           sender_name = $chat_users.index(client_sock)
@@ -72,4 +74,4 @@ class ChatController < ApplicationController
       end
     end
   end
-  end
+end

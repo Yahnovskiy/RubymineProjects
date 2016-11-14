@@ -11,7 +11,7 @@ class LoginController < ApplicationController
     else
 
     session[:login] = @chat_user.login
-
+    redirect_to :root
     end
     end
   end
