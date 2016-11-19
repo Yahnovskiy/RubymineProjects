@@ -8,8 +8,14 @@
     <br/>
     <%= label_tag(:password, 'Password') %>
     <%= password_field_tag(:password) %>
+
+    <br/>
+    <%= label_tag(:isadmin, 'Is Admin') %>
+    <%= check_box_tag(:isadmin) %>
     <br/>
     <%= submit_tag('Send') %>
+
+
 <% end %>
 
 

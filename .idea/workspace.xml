@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b0305ba-c324-4b78-bb87-5c8792c98693" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AirCompany/New Bitmap Image.bmp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebChat/app/views/admin/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/.idea/workspace.xml" afterPath="$PROJECT_DIR$/WebChat/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/app/controllers/chat_controller.rb" afterPath="$PROJECT_DIR$/WebChat/app/controllers/chat_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/app/controllers/login_controller.rb" afterPath="$PROJECT_DIR$/WebChat/app/controllers/login_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/app/views/chat/index.html.erb" afterPath="$PROJECT_DIR$/WebChat/app/views/chat/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/app/views/login/login_verify.html.erb" afterPath="$PROJECT_DIR$/WebChat/app/views/login/login_verify.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/app/views/login/index.html.erb" afterPath="$PROJECT_DIR$/WebChat/app/views/login/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat/config/routes.rb" afterPath="$PROJECT_DIR$/WebChat/config/routes.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,8 +109,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
-    <option name="height" value="723" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -138,6 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -158,8 +159,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +439,8 @@
       <workItem from="1478462908659" duration="1019000" />
       <workItem from="1478948975383" duration="913000" />
       <workItem from="1478950312365" duration="267000" />
-      <workItem from="1479110439921" duration="12000" />
+      <workItem from="1479110439921" duration="351000" />
+      <workItem from="1479547142956" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1475174989851</created>
@@ -484,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478950569996</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="New commit">
+      <created>1479110459152</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1479110459153</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -499,7 +506,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28479000" />
+    <option name="totallyTimeSpent" value="28823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,14 +518,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="723" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24656488" sideWeight="0.4909091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25037822" sideWeight="0.4909091" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3560477" sideWeight="0.510687" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3560477" sideWeight="0.510687" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3560477" sideWeight="0.48931298" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35598704" sideWeight="0.48931298" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22844176" sideWeight="0.5090909" order="2" side_tool="true" content_ui="tabs" />
